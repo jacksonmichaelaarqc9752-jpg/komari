@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: komari-chika
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
